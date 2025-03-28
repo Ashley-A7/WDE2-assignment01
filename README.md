@@ -12,9 +12,9 @@ git clone https://github.com/yourusername/flask-docker-app.git
 cd flask-docker-app
 ```
 
-2. Build and Run the App Using Docker Compose
+### 2. Build and Run the App Using Docker Compose
 ```bash
 docker-compose up
 ```
 
-3. Visit `http://localhost:5000` in your web browser to access the registration form.
+### 3. Visit `http://localhost:5000` in your web browser to access the registration form.

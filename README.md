@@ -4,13 +4,17 @@ This is a simple Flask app for marathon registration. The app allows participant
 
 ## Running the Flask App with Docker
 
-1. Clone the repository.
-2. Build the Docker image:
-   ```bash
-   docker build -t marathon-registration .
-   ```
-3. Run the Docker container:
-   ```bash
-   docker run -p 5000:5000 marathon-registration
-   ```
-4. Visit `http://localhost:5000` in your web browser to access the registration form.
+### 1. Clone the Repository
+
+Clone this repository to your local machine:
+```bash
+git clone https://github.com/yourusername/flask-docker-app.git
+cd flask-docker-app
+```
+
+2. Build and Run the App Using Docker Compose
+```bash
+docker-compose up
+```
+
+3. Visit `http://localhost:5000` in your web browser to access the registration form.

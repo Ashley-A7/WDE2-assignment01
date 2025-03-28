@@ -17,7 +17,7 @@ cd flask-docker-app
 docker-compose up
 ```
 
-### 3. Visit the registratin form in your web broswer 
+### 3. Visit the registration form in your web broswer 
 ```bash
 http://localhost:5000
 ```

@@ -8,7 +8,7 @@ This is a simple Flask app for marathon registration. The app allows participant
 
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/username/WDE2-assignment01.git
+git clone https://github.com/Ashley_A7/WDE2-assignment01.git
 cd test-2
 
 ```

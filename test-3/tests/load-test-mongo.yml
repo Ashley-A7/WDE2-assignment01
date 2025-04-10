@@ -1,0 +1,24 @@
+# load-test-mongo.yml
+config:
+  target: "http://localhost:5000"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+
+  defaults:
+    headers:
+      Content-Type: application/x-www-form-urlencoded
+
+  processors:
+    - log: true
+
+scenarios:
+  - flow:
+      - post:
+          url: "/register"
+          form:
+            name: "TestUser{{ $randomInt(100000,999999) }}{{ $randomInt(100000,999999) }}"
+            email: "test{{ $randomInt(100000,999999) }}{{ $randomInt(100000,999999) }}@example.com"
+            age: "25"
+            distance: "10K"
+            medical: ""

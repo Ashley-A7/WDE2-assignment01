@@ -1,0 +1,22 @@
+# tests/test_mysql.py
+import requests
+import time
+
+url = "http://localhost:5002/register"
+
+def test_registration():
+    payload = {
+        "name": "Jane Doe",
+        "email": f"jane{time.time()}@example.com",
+        "age": 28,
+        "distance": "half-marathon",
+        "medical": "None"
+    }
+    start_time = time.time()
+    response = requests.post(url, data=payload)
+    end_time = time.time()
+    print(f"Response Time (MySQL): {end_time - start_time} seconds")
+    assert response.status_code == 200
+
+if __name__ == "__main__":
+    test_registration()

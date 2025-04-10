@@ -1,0 +1,59 @@
+services:
+  mongo:
+    image: mongo
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+
+  node-app:
+    build:
+      context: ./marathon-registration-node # Make sure this points to the correct folder where your Dockerfile is
+    container_name: node-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo # Waits for MongoDB to be available
+    networks:
+      - app-network
+    environment:
+      - MONGO_URI=mongodb://mongo-db:27017
+      - NODE_ENV=development
+    volumes:
+      - ./marathon-registration-node:/app
+
+  python-app:
+    build:
+      context: ./marathon-registration-python # Make sure this points to the correct folder where your Dockerfile is
+    container_name: python-app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    networks:
+      - app-network
+    environment:
+      - FLASK_APP=server.py
+      - FLASK_ENV=development
+      - MONGO_URI=mongodb://mongo-db:27017
+    volumes:
+      - ./marathon-registration-python:/app
+
+  python-sqlite-app:
+    build:
+      context: ./marathon-python-sqlite
+    container_name: python-sqlite-app
+    ports:
+      - "5002:5000"
+    networks:
+      - app-network
+    environment:
+      - FLASK_APP=server_sqlite.py
+      - FLASK_ENV=development
+    volumes:
+      - ./marathon-python-sqlite:/app
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,47 @@
+.background-image {
+    background-color: rgba(0, 0, 0, 50%);
+    background-image: url(https://assets-chicagomarathon-com.s3.amazonaws.com/wp-content/uploads/2024/12/Runner-information.jpg);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 150px;
+}
+
+.form {
+    background: linear-gradient(#fabc3c, #facc6b);
+}
+
+.slick-slide {
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slide {
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+
+.slide-1 {
+    background-image: url(https://www.torontowaterfrontmarathon.com/wp-content/uploads/2023/10/C0BCDF33-0ED5-4D46-ABD1-E119D6BADFCD.jpg);
+}
+
+.slide-2{
+    background-image: url(https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_lg_2x/f_auto/primary/umor6n99mz5qtmgvq625);
+}
+
+.slide-3{
+    background-image: url(https://cdn.prod.website-files.com/5f58a4616a9e71d63ca059c8/63eb9c9bc0c7e518fd04ee67_MG1_2798.webp);
+}
+
+.slide-4{
+    background-image: url(https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2024-06/240627-tokyo-marathon-al-1310-5e05b5.jpg);
+}
+
+.slide-5{
+    background-image: url(https://media.gq-magazine.co.uk/photos/6422b386a74758f5d02d2b44/16:9/w_1920,h_1080,c_limit/How-to-train-for-a-marathon-hp-a.jpg);
+}
+
+.slide-6{
+    background-image: url(https://bucharest-marathon.com/wp-content/uploads/2016/10/RBBM-2016-Author-PhotoRun-Bucharest-RUNNING-CLUB-3-1.jpg);
+}

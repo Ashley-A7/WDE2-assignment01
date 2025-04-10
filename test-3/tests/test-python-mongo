@@ -1,0 +1,22 @@
+# tests/test_mongodb.py
+import requests
+import time
+
+url = "http://localhost:5000/register"
+
+def test_registration():
+    payload = {
+        "name": "John Doe",
+        "email": f"john{time.time()}@example.com",
+        "age": 30,
+        "distance": "marathon",
+        "medical": "None"
+    }
+    start_time = time.time()
+    response = requests.post(url, data=payload)
+    end_time = time.time()
+    print(f"Response Time (MongoDB): {end_time - start_time} seconds")
+    assert response.status_code == 200
+
+if __name__ == "__main__":
+    test_registration()
